@@ -15,7 +15,6 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import PageTransitionProvider from "@/components/page-transition-provider";
-import VimeoVideo from "@/components/vimeo-video";
 import { VideoIcon } from "lucide-react";
 
 const Portfolio = () => {

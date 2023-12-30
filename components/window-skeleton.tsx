@@ -15,7 +15,7 @@ const Skeleton = () => {
       },
     };
 
-    controls.start(animation);
+    controls.start("animation");
   }, [controls]);
 
   return (

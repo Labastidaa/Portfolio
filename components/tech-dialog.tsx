@@ -1,22 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { LuCode2 } from "react-icons/lu";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Separator } from "./ui/separator";
 import ItemTransition from "./item-transition";
 
