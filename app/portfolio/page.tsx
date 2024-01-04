@@ -40,9 +40,7 @@ const Portfolio = () => {
                   alt="Project-image"
                   style={{ objectFit: "cover" }}
                   fill
-                  className=""
-                  // width={40}
-                  // height={80}
+                  placeholder="blur"
                 />
               </div>
               <div className="space-y-2 text-white/70">
