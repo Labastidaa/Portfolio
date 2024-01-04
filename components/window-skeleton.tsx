@@ -6,15 +6,14 @@ const Skeleton = () => {
   const controls = useAnimation();
 
   useEffect(() => {
-    const animation = {
+    controls.start({
       opacity: [0.5, 1],
       transition: {
         duration: 1.5,
         repeat: Infinity,
+        repeatType: "reverse",
       },
-    };
-
-    controls.start(animation);
+    });
   }, [controls]);
 
   return (
