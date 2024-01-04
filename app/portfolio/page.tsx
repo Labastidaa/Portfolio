@@ -21,7 +21,7 @@ const Portfolio = () => {
   return (
     <PageTransitionProvider>
       <div className="w-full h-auto flex justify-center items-center">
-        <div className="p-10 w-[80%] max-w-[1440px] h-full ">
+        <div className="md:p-10 w-[95%] md:w-[80%] max-w-[1440px] h-full ">
           <Link
             className={cn(
               buttonVariants({ variant: "default" }),
@@ -33,9 +33,20 @@ const Portfolio = () => {
           </Link>
 
           <div className="w-full h-full bg-gradient-to-r from-[#0083AD] via-purple-400 to-blue-800 rounded-[24px] items-center flex flex-col p-[2px]">
-            <div className="bg-black rounded-[24px] w-full h-full flex flex-col p-10 space-y-5 items-between justify-between">
+            <div className="bg-black rounded-[24px] w-full h-full flex flex-col p-5 md:p-10 space-y-5 items-between justify-between">
+              <div className="relative w-full h-[300px] md:h-[250px] lg:h-[630px]">
+                <Image
+                  src={"/ss.png"}
+                  alt="Project-image"
+                  style={{ objectFit: "cover" }}
+                  fill
+                  className=""
+                  // width={40}
+                  // height={80}
+                />
+              </div>
               <div className="space-y-2 text-white/70">
-                <h3 className="text-5xl font-bold">
+                <h3 className="text-xl md:text-5xl font-bold">
                   Gardening e-Commerce + Admin Dashboard
                 </h3>
                 <p>
@@ -84,7 +95,7 @@ const Portfolio = () => {
               </div>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
-                  <AccordionTrigger className="text-2xl">
+                  <AccordionTrigger className="text-base md:text-2xl">
                     Desktop Store Preview
                   </AccordionTrigger>
                   <AccordionContent>
@@ -101,26 +112,8 @@ const Portfolio = () => {
                     </div>{" "}
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-2">
-                  <AccordionTrigger className="text-2xl">
-                    Mobile Store Preview
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="w-full h-auto rounded-[24px] flex relative overflow-y-scroll">
-                      <Image
-                        src={"/mobile-dark-product-page.png"}
-                        alt=""
-                        width={1440}
-                        height={1000}
-                        style={{ objectFit: "cover" }}
-                        sizes="(max-width: 500px)"
-                        className="border"
-                      />
-                    </div>{" "}
-                  </AccordionContent>
-                </AccordionItem>
                 <AccordionItem value="item-3">
-                  <AccordionTrigger className="text-2xl">
+                  <AccordionTrigger className="text-base md:text-2xl">
                     Admin Product Dashboard Preview
                   </AccordionTrigger>
                   <AccordionContent>
@@ -138,7 +131,7 @@ const Portfolio = () => {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                  <AccordionTrigger className="text-2xl">
+                  <AccordionTrigger className="text-base md:text-2xl">
                     Dashboard Product Update
                   </AccordionTrigger>
                   <AccordionContent>
