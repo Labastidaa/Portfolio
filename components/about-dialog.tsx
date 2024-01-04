@@ -8,6 +8,11 @@ import {
 } from "@/components/ui/dialog";
 import HandWave from "@/components/hand-wave";
 import ItemTransition from "./item-transition";
+import Link from "next/link";
+import { Mail } from "lucide-react";
+import { buttonVariants } from "./ui/button";
+import { cn } from "@/lib/utils";
+import { Badge } from "./ui/badge";
 
 const About = () => {
   return (
@@ -54,9 +59,24 @@ const About = () => {
                 fluently.
               </p>
 
-              <p className="text-base sm:text-2xl font-bold pt-5">
+              <p className="text-base sm:text-xl font-bold pt-5">
                 Cambridge Certification B2.
               </p>
+
+              <div className="flex pt-5">
+                <Badge className="text-xl font-normal" variant={"outline"}>
+                  geovannilavz@gmail.com
+                </Badge>
+              </div>
+              <Link
+                href={
+                  "https://drive.google.com/file/d/1FYquBjvkD2ryqyuUmKafgjrUkJIIueqh/view?usp=drive_link"
+                }
+                className={cn(buttonVariants({ variant: "default" }), "mt-5")}
+                target="_blank"
+              >
+                View my CV
+              </Link>
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
