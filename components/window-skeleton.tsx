@@ -11,11 +11,10 @@ const Skeleton = () => {
       transition: {
         duration: 1.5,
         repeat: Infinity,
-        repeatType: "reverse",
       },
     };
 
-    controls.start("animation");
+    controls.start(animation);
   }, [controls]);
 
   return (
