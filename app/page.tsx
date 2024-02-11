@@ -1,44 +1,115 @@
-import Link from "next/link";
-import About from "@/components/about-dialog";
 import Tech from "@/components/tech-dialog";
-import Skeleton from "@/components/window-skeleton";
 import Contact from "@/components/contact-icons";
 import PageTransitionProvider from "@/components/page-transition-provider";
 import ItemTransition from "@/components/item-transition";
+import ProjectCard from "@/components/ui/project-card";
+import HandWave from "@/components/hand-wave";
+import { useEffect, useState } from "react";
+import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
+  const TechStack = [
+    "TypeScript",
+    "Go",
+    "Next.js",
+    "React.js",
+    "RESTful API",
+    "JWT",
+    "PostgreSQL",
+    "MySQL",
+    "Docker",
+    "Vitest",
+    "Jest",
+    "Playwright E2E",
+    "Mock Service Worker",
+    "Tailwind CSS",
+    "Github",
+  ];
+
+  const Web3Stack = [
+    "Blockchain Technology",
+    "Solidity",
+    "Ethereum Virtual Machine",
+    "Smart Contracts",
+    "Foundry",
+    "Hardhat",
+    "Sepolia testnet",
+    "Chainlink Oracle",
+    "JSON-RPC",
+    "Alchemy",
+    "Web3.js",
+    "Consensus Mechanisms",
+    "DeFi",
+  ];
+
+  const Projects = [
+    {
+      link: "/portfolio",
+      title: "eCommmerce",
+      description:
+        "Gardening Store with fundamental Store operations. Register using OAuth to Add/Delete items to your Cart, Review and Pay using Stripe Checkout. This projects also features an Admin Dashboard to manage your Products and Categories, your account must be Admin to access the Dashboard.",
+      tags: [
+        "TypeScript",
+        "Next.js",
+        "Server Actions",
+        "MySQL",
+        "JWT",
+        "Clerk",
+      ],
+    },
+    // {
+    //   link: "/portfolio",
+    //   title: "eCommmercce2",
+    //   description: "This 2 is a test description",
+    //   tags: ["tag1", "tag2", "tag3", "tag4"],
+    // },
+  ];
+
   return (
     <PageTransitionProvider>
-      <main className="bg-black flex min-h-screen w-full flex-col items-start sm:items-center justify-start sm:justify-center">
-        <div className="bg-black w-full h-[100vh] 2xl:max-w-[1440px] p-3 md:p-10 flex-shrink-0">
-          <div className="flex flex-col w-full h-full space-y-5">
-            <div className="w-full h-2/5 space-y-5 lg:space-y-0 lg:space-x-5 flex flex-col lg:flex-row">
-              <div className=" w-full lg:w-1/2 h-1/2 md:h-full max-h-[400px] rounded-[24px]">
-                <About />
+      <main className="bg-black flex h-auto w-full flex-col items-start sm:items-center justify-start sm:justify-center">
+        <div className="bg-black w-full min-h-screen h-full 2xl:max-w-[1080px] text-primary-foreground flex-shrink-0">
+          <div className="p-20 min-h-[700px] flex flex-col justify-center space-y-10">
+            <div className="space-y-2">
+              <ItemTransition delay={0.5}>
+                <HandWave />
+                <h1 className="text-3xl sm:text-6xl text-[#6bd6f0] font-bold inline-block pb-1">
+                  Geovanni Lavz
+                </h1>
+              </ItemTransition>
+              <div className="flex space-x-4">
+                <span className="text-4xl">🇲🇽</span>
+                <p className="text-xl text-white/80 sm:text-2xl text- font-semibold pb-5">
+                  Software Developer
+                </p>
               </div>
-              <div className="w-full lg:w-1/2 h-1/2 md:h-full max-h-[400px] rounded-[24px]">
-                <Tech />
-              </div>
+              <p className="text-xl text-white/80">
+                My journey as a Developer started in College but I continue
+                learning with documentation, courses, online resources, AI, and
+                building. My experience is primarily on Web Development and
+                I&apos;ve been learning Web3 Technologies.
+              </p>
             </div>
-            <div className="bg-black w-full h-2/5 max-h-[400px] rounded-[24px] transition-all duration-700 bg-gradient-to-r from-[#0083AD] via-purple-400 p-[2px] to-blue-800 hover:shadow-[#0083AD]/70 hover:shadow-md">
-              <Link
-                href={"/portfolio"}
-                className="bg-black w-full h-full flex flex-col lg:flex-row text-3xl sm:text-6xl font-bold text-white/70 transition-all duration-700 hover:text-white border-0 border-[#0083AD] hover:border-[#0da7d9] rounded-[24px]"
-              >
-                <ItemTransition delay={0.7}>
-                  <h1 className="p-5 sm:p-10 sm:w-1/2">Portfolio</h1>
-                </ItemTransition>
-                <div className="w-full lg:w-2/3 flex flex-col justify-end items-center h-full rounded-[24px]">
-                  <Skeleton />
-                </div>
-              </Link>
-            </div>
-            <div className=" w-full h-1/5 rounded-[24px]">
-              <div className="w-full h-full flex flex-col items-center justify-center">
-                <Contact />
-              </div>
+
+            <div className="">
+              <Tech techlist={TechStack} direction="right" />
+              <Tech techlist={Web3Stack} direction="left" />
             </div>
           </div>
+
+          <div className="flex flex-col w-full h-auto py-10 space-y-5">
+            {Projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                link={project.link}
+                title={project.title}
+                description={project.description}
+                tags={project.tags}
+              />
+            ))}
+          </div>
+
+          <Contact />
         </div>
       </main>
     </PageTransitionProvider>

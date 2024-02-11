@@ -17,11 +17,17 @@ import { Badge } from "./ui/badge";
 const About = () => {
   return (
     <div className="w-full h-full rounded-[24px]">
-      <Dialog>
+      <div className="bg-black w-full h-full focus:outline-none text-white/70 rounded-[24px] text-3xl sm:text-6xl font-bold border-2 border-[#0083AD] hover:border-[#0da7d9] hover:shadow-md transition-all duration-700 hover:shadow-[#0083AD]/70 flex items-start hover:text-white p-5 sm:p-10">
+        <ItemTransition delay={0.3}>
+          <HandWave />
+          <span className="">I'm Geovanni</span>
+        </ItemTransition>
+      </div>
+      {/* <Dialog>
         <DialogTrigger className="bg-black w-full h-full focus:outline-none text-white/70 rounded-[24px] text-3xl sm:text-6xl font-bold border-2 border-[#0083AD] hover:border-[#0da7d9] hover:shadow-md transition-all duration-700 hover:shadow-[#0083AD]/70 flex items-start hover:text-white p-5 sm:p-10">
           <ItemTransition delay={0.3}>
             <HandWave />
-            <span className="">About me</span>
+            <span className="">I'm Geovanni</span>
           </ItemTransition>
         </DialogTrigger>
         <DialogContent className="py-14 md:p-20 no-scrollbar">
@@ -80,7 +86,7 @@ const About = () => {
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </div>
   );
 };

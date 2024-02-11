@@ -17,15 +17,15 @@ const Skeleton = () => {
   }, [controls]);
 
   return (
-    <div className="flex items-center justify-end w-full flex-col">
-      <div className="w-[90%] flex items-center pl-2 border-2 rounded-t-[10px] h-[24px] space-x-1">
+    <div className="flex items-center justify-end w-full flex-col pt-5">
+      <div className="w-[100%] flex items-center pl-2 border-2 border-primary-foreground/30 rounded-t-[10px] h-[24px] space-x-1">
         <span className="w-2 h-2 rounded-full bg-red-500"></span>
         <span className="w-2 h-2 rounded-full bg-green-500"></span>
         <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
       </div>
-      <div className="w-[90%] h-[150px] max-h-[300px] border-x">
+      <div className="w-[100%] h-[150px] max-h-[300px] border-x border-primary-foreground/30">
         <div className="w-full h-full flex">
-          <div className="w-1/2 h-full flex flex-col border space-y-2 p-5">
+          <div className="w-1/2 h-full flex flex-col border border-primary-foreground/30 space-y-2 p-5">
             <div className="w-full h-auto space-x-5 flex pb-5">
               <motion.span
                 className="w-[30px] h-[30px] rounded-full bg-neutral-700"
@@ -59,7 +59,7 @@ const Skeleton = () => {
               animate={controls}
             />
           </div>
-          <div className="w-1/2 h-full flex flex-col border space-y-2 p-5">
+          <div className="w-1/2 h-full flex flex-col border border-primary-foreground/30 space-y-2 p-5">
             <motion.span
               className="w-full h-[6px] rounded-full bg-neutral-700"
               animate={controls}

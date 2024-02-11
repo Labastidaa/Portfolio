@@ -12,13 +12,13 @@ const ItemTransition = ({
   return (
     <motion.div
       className="flex"
-      initial={{ opacity: 0, x: 40 }}
+      initial={{ opacity: 0, y: -20 }}
       animate={{
         opacity: 1,
-        x: 0,
-        transition: { delay: delay, duration: 1.5 },
+        y: 0,
+        transition: { delay: delay, duration: 1 },
       }}
-      exit={{ opacity: 0, x: 40 }}
+      exit={{ opacity: 0, y: 40 }}
       transition={{ duration: 3 }}
     >
       {children}

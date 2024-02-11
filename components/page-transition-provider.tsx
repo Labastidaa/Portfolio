@@ -15,7 +15,6 @@ const PageTransitionProvider = ({
 
   return (
     <motion.div
-      className=""
       variants={animations}
       initial="initial"
       animate="animate"

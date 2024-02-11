@@ -6,15 +6,15 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="flex items-center space-x-10 justify-center">
+    <div className="flex items-center space-x-10 h-[200px] justify-center">
       <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
         <Link href={"https://github.com/Labastidaa"}>
-          <FaGithub className="w-[4rem] h-[4rem]" />
+          <FaGithub className="w-[3rem] h-[3rem]" />
         </Link>
       </motion.div>
       <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
         <Link href={"https://www.linkedin.com/in/geolavz/"}>
-          <FaLinkedin className="w-[4rem] h-[4rem]" />
+          <FaLinkedin className="w-[3rem] h-[3rem]" />
         </Link>
       </motion.div>
     </div>
