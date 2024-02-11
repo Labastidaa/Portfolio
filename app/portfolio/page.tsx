@@ -7,7 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import PageTransitionProvider from "@/components/page-transition-provider";
 import { Sprout, VideoIcon } from "lucide-react";
-import Tech from "@/components/tech-dialog";
+import Tech from "@/components/tech";
 
 import { Tooltip } from "@/components/ui/tooltip";
 import CopyToClipboard from "@/components/ui/copy-clipboard";

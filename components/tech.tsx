@@ -17,7 +17,6 @@ const Tech = ({
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    // Update state to trigger animation if the user hasn't opted for reduced motion
     if (!prefersReducedMotion) {
       setAnimated(true);
     }

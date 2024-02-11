@@ -1,4 +1,4 @@
-import Tech from "@/components/tech-dialog";
+import Tech from "@/components/tech";
 import Contact from "@/components/contact-icons";
 import PageTransitionProvider from "@/components/page-transition-provider";
 import ItemTransition from "@/components/item-transition";
