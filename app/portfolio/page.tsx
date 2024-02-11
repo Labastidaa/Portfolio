@@ -131,7 +131,7 @@ const Portfolio = () => {
               <div className="space-y-5">
                 <Link
                   className={cn(
-                    buttonVariants({ variant: "secondary" }),
+                    buttonVariants({ variant: "default" }),
                     "flex top-10 w-full space-x-5 h-[50px] left-10 rounded-[20px]"
                   )}
                   href={"https://store-gardening.vercel.app/"}
@@ -143,7 +143,7 @@ const Portfolio = () => {
                 </Link>
                 <Link
                   className={cn(
-                    buttonVariants({ variant: "default" }),
+                    buttonVariants({ variant: "secondary" }),
                     "flex top-10 w-full space-x-5 h-[50px] left-10 rounded-[20px]"
                   )}
                   href={"https://github.com/Labastidaa/store-gardening"}
@@ -155,7 +155,7 @@ const Portfolio = () => {
                 </Link>
                 <Link
                   className={cn(
-                    buttonVariants({ variant: "default" }),
+                    buttonVariants({ variant: "secondary" }),
                     "flex top-10 w-full space-x-5 h-[50px] left-10 rounded-[20px]"
                   )}
                   href={"https://vimeo.com/manage/videos/898797134"}

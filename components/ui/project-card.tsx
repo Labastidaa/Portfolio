@@ -29,7 +29,7 @@ const ProjectCard = ({ link, title, description, tags }: CardProps) => {
               <Badge
                 key={index}
                 variant={"outline"}
-                className="bg-white border-none text-black px-2 py-0.2 text-[0.2rem]"
+                className="bg-white border-none text-[#2b2b2b] hover:text-black px-2 py-0.2 text-[0.2rem]"
               >
                 {tag}
               </Badge>
