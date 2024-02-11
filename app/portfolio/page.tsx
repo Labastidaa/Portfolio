@@ -80,7 +80,7 @@ const Portfolio = () => {
                     Tanstack Query.
                   </p>
 
-                  <div className="space-y-5 lg:flex">
+                  <div className="space-y-5 lg:space-y-0 lg:flex">
                     <div className="lg:w-1/2 space-y-2">
                       <h3 className="text-2xl md:text-3xl font-bold">
                         Store Features
@@ -122,7 +122,7 @@ const Portfolio = () => {
                   </div>
 
                   <p className="space-x-5">
-                    Test card for payment
+                    Test card for payment{" "}
                     <CopyToClipboard text={"4242424242424242"} />
                   </p>
                 </div>
