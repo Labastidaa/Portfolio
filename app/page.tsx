@@ -6,7 +6,7 @@ import ProjectCard from "@/components/ui/project-card";
 export default function Home() {
   const Projects = [
     {
-      link: "https://app-latest-kco7.onrender.com/",
+      link: "https://www.glvz-ds.com/",
       title: "Design system & Storybook UI Library",
       image: "/ds-ui-lib.png",
       descriptions: [
@@ -47,18 +47,18 @@ export default function Home() {
           <div className="py-[100px] flex flex-col justify-center">
             <div className="flex flex-col gap-4 items-center py-[50px]">
               <ItemTransition delay={0.5} className="">
-                <h1 className="text-3xl sm:text-6xl text-[#eeeeee] p-[24px] font-bold inline-block">
+                <h1 className="text-4xl sm:text-6xl text-[#eeeeee] p-[16px] sm:p-[24px] font-bold inline-block">
                   geolavz
                 </h1>
               </ItemTransition>
               <div className="flex space-x-4 items-center">
-                <p className="text-2xl">🇲🇽</p>
-                <h2 className="text-2xl text-white/80 text- font-semibold">
+                <p className="text-xl sm:text-2xl">🇲🇽</p>
+                <h2 className="textl-xl sm:text-2xl text-white/80 text- font-semibold">
                   Software Developer
                 </h2>
               </div>
-              <div className="flex text-lg flex-col items-center">
-                <h3 className="font-semibold">
+              <div className="flex text-base sm:text-lg flex-col justify-center items-center">
+                <h3 className="font-semibold text-center sm:text-start">
                   Building semantic, accessible and user-centric Web Apps
                 </h3>
                 <h3 className="font-semibold">UI/UX</h3>
@@ -76,9 +76,9 @@ export default function Home() {
           </div>
 
           <div className="py-[50px] flex gap-4 flex-col">
-            <h3 className="text-xl font-bold">ABOUT</h3>
-            <div className="flex flex-col gap-4">
-              <p className="text-xl text-white/60 font-semibold">
+            <h3 className="text-lg sm:text-xl font-bold">ABOUT</h3>
+            <div className="flex text-base sm:text-xl flex-col gap-4">
+              <p className="text-white/60 font-semibold">
                 I started
                 <span className="px-1 highlight-component text-[#38cff5]">
                   coding
@@ -89,14 +89,14 @@ export default function Home() {
                 learned solid computer science foundations, software
                 development, hardware, logic and math.
               </p>
-              <p className="text-xl text-white/60 font-semibold">
-                Passionate about technology, AI, Blockchain and Nature.
+              <p className=" text-white/60 font-semibold">
+                Passionate about technology, AI, blockchain and nature.
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col w-full items-start h-auto py-[50px]  space-y-5">
-            <h3 className="text-xl font-bold">PROJECTS</h3>
+          <div className="flex flex-col w-full items-start h-auto py-[50px] space-y-5">
+            <h3 className="text-lg sm:text-xl font-bold">PROJECTS</h3>
             {Projects.map((project, index) => (
               <ProjectCard
                 key={index}

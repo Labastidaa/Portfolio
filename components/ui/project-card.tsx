@@ -22,8 +22,8 @@ const ProjectCard: React.FC<CardProps> = ({
 }) => {
   return (
     <div className="border-[3px] w-full flex flex-col border-[#30A8DC]">
-      <div className="flex h-[40px] items-center pl-[24px] border-b-[3px] border-[#30A8DC] bg-[#001424]">
-        <h3 className="text-xl font-semibold">{title}</h3>
+      <div className="flex min-h-[40px] items-center pl-[8px] sm:pl-[24px] border-b-[3px] border-[#30A8DC] bg-[#001424]">
+        <h3 className="text-base sm:text-xl font-semibold">{title}</h3>
       </div>
       <div className="flex flex-col lg:flex-row w-full h-fit">
         <div className="aspect-video w-full lg:w-[800px] xl:w-[900px] relative overflow-clip">
@@ -31,9 +31,13 @@ const ProjectCard: React.FC<CardProps> = ({
         </div>
         <div className="flex flex-col w-full p-[24px]">
           <div className="bg-black w-full h-full flex flex-col gap-[16px]">
-            <div className="space-x-2 space-y-2">
+            <div className="gap-[4px] flex items-center flex-wrap h-fit">
               {tags.map((tag, index) => (
-                <Badge key={index} variant={"white"} className="font-semibold">
+                <Badge
+                  key={index}
+                  variant={"white"}
+                  className="font-semibold h-full sm:h-auto sm:w-auto "
+                >
                   {tag}
                 </Badge>
               ))}
@@ -42,7 +46,7 @@ const ProjectCard: React.FC<CardProps> = ({
               <ul className="">
                 {descriptions.map((description, index) => (
                   <li key={index} className="list-disc list-inside">
-                    <span className=" text-white/60 font-semibold">
+                    <span className="text-base sm:text-base text-white/70">
                       {description}
                     </span>
                   </li>
@@ -51,7 +55,10 @@ const ProjectCard: React.FC<CardProps> = ({
             </div>
           </div>
           <div className="hover:text-blue-500">
-            <Link href={link} className="flex justify-end h-[32px]">
+            <Link
+              href={link}
+              className="flex justify-end h-[40px] items-center"
+            >
               <ChevronRight size={32} />
             </Link>
           </div>
